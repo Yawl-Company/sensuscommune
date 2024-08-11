@@ -1,3 +1,9 @@
+@file:Suppress("UnstableApiUsage")
+
+rootProject.name = "sensus-commune"
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 pluginManagement {
     repositories {
         google {
@@ -12,7 +18,6 @@ pluginManagement {
     }
 }
 
-@Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -21,5 +26,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Sensus Commune"
+includeBuild("build-logic")
+
 include(":app")
