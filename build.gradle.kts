@@ -7,3 +7,7 @@ plugins {
     alias(libs.plugins.room) apply false
     alias(libs.plugins.yawl.detekt.root)
 }
+
+tasks.named("check") {
+    dependsOn(gradle.includedBuild("build-logic").task(":check"))
+}
