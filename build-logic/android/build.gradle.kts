@@ -27,5 +27,10 @@ gradlePlugin {
             id = "convention.android-compose"
             implementationClass = "com.yawl.AndroidComposeConventionPlugin"
         }
+
+        create("dagger") {
+            id = "convention.dagger"
+            implementationClass = "com.yawl.DaggerConventionPlugin"
+        }
     }
 }
