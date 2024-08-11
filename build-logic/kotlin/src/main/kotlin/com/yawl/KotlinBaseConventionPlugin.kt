@@ -8,6 +8,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 class KotlinBaseConventionPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
+            plugins.apply("convention.detekt")
+
             val kotlinVersion = KotlinVersion.fromVersion(
                 libs.versions.kotlinLanguageVersion.get()
             )

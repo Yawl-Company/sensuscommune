@@ -18,3 +18,4 @@ include("gradle-extension")
 
 include("kotlin")
 include("android")
+include("checking")

@@ -11,6 +11,7 @@ coreKtx = "1.13.1"
 dagger = "2.52"
 ksp = "2.0.0-1.0.21"
 room = "2.6.1"
+detekt = "1.23.5"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -24,6 +25,7 @@ kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+detektGradle = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -45,6 +47,7 @@ dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", versi
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -61,3 +64,5 @@ yawl-android-compose = { id = "convention.android-compose", version = "unspecifi
 yawl-ksp = { id = "convention.ksp", version = "unspecified" }
 yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-room = { id = "convention.room", version = "unspecified" }
+yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
+yawl-detekt = { id = "convention.detekt", version = "unspecified" }
