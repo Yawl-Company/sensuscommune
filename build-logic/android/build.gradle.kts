@@ -8,7 +8,7 @@ dependencies {
     implementation(project(":gradle-extension"))
     implementation(libs.android.gradlePlugin)
     // workaround for https://github.com/gradle/gradle/issues/15383
-    implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
+    implementation(files((libs as Any).javaClass.superclass.protectionDomain.codeSource.location))
 }
 
 gradlePlugin {
