@@ -17,5 +17,10 @@ gradlePlugin {
             id = "convention.ksp"
             implementationClass = "com.yawl.KspConventionPlugin"
         }
+
+        create("serialization") {
+            id = "convention.serialization"
+            implementationClass = "com.yawl.KotlinSerializationConventionPlugin"
+        }
     }
 }

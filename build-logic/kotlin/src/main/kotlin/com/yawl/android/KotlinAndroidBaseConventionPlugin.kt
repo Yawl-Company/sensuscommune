@@ -10,7 +10,6 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 class KotlinAndroidBaseConventionPlugin : Plugin<Project> {
-
     override fun apply(project: Project) {
         with(project) {
             plugins.apply("kotlin-android")
