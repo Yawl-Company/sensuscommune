@@ -8,12 +8,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 class KotlinBaseConventionPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         with(project) {
-            val kotlinLanguageVersion = libs.versions.kotlinLanguageVersion.get()
+            plugins.apply("convention.detekt")
+
+            val kotlinVersion = KotlinVersion.fromVersion(
+                libs.versions.kotlinLanguageVersion.get()
+            )
             tasks.withType(KotlinCompile::class.java).configureEach {
                 it.compilerOptions {
                     allWarningsAsErrors.set(true)
-                    languageVersion.set(KotlinVersion.fromVersion(kotlinLanguageVersion))
-                    apiVersion.set(KotlinVersion.fromVersion(kotlinLanguageVersion))
+                    languageVersion.set(kotlinVersion)
+                    apiVersion.set(kotlinVersion)
 
                     freeCompilerArgs.set(
                         mutableListOf(
