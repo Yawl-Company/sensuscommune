@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.yawl.android.application)
-    alias(libs.plugins.yawl.android.compose)
+    alias(libs.plugins.yawl.android.application.compose)
     alias(libs.plugins.yawl.dagger)
 }
 
@@ -49,4 +49,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
+    implementation(projects.core.designSystem)
 }

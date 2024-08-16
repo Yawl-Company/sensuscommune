@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.ui.theme
+package com.yawl.sensuscommune.designsystem
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
