@@ -11,7 +11,6 @@ class FirebaseConventionPlugin : Plugin<Project> {
             val bom = libs.firebase.bom.get()
             dependencies.apply {
                 add("implementation", platform(bom))
-                add("implementation", libs.firebase.analytics.get())
             }
         }
     }
