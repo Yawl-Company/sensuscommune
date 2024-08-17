@@ -19,6 +19,8 @@ lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2024.06.00"
 androidxComposeCompiler = "1.5.12"
+gms = "4.4.2"
+firebaseBom = "33.1.2"
 
 [libraries]
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -53,6 +55,8 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 detektFormatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -62,6 +66,7 @@ kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 kotlin-parcelable = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 room = { id = "androidx.room", version.ref = "room" }
+google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
 
 yawl-android-application = { id = "convention.kotlin-android-app", version = "unspecified" }
 yawl-android-library = { id = "convention.kotlin-android-library", version = "unspecified" }
@@ -72,3 +77,4 @@ yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-room = { id = "convention.room", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-detekt = { id = "convention.detekt", version = "unspecified" }
+yawl-firebase = { id = "convention.firebase", version = "unspecified" }
