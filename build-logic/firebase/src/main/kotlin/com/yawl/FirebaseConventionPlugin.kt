@@ -6,7 +6,7 @@ import org.gradle.api.Project
 class FirebaseConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            plugins.apply("com.google.gms.google-services")
+            plugins.apply(libs.plugins.google.services.get().pluginId)
 
             val bom = libs.firebase.bom.get()
             dependencies.apply {

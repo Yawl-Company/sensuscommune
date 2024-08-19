@@ -8,7 +8,7 @@ import org.gradle.api.Project
 class AndroidRoomConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            plugins.apply("androidx.room")
+            plugins.apply(libs.plugins.room.get().pluginId)
             plugins.apply(KspConventionPlugin::class.java)
 
             extensions.configure(KspExtension::class.java) {

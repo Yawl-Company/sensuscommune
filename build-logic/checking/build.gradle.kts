@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":gradle-extension"))
-    implementation(libs.detektGradle)
+    implementation(projects.gradleExtension)
+    implementation(libs.detekt.gradlePlugin)
     implementation(gradleKotlinDsl())
     // workaround for https://github.com/gradle/gradle/issues/15383
     implementation(files((libs as Any).javaClass.superclass.protectionDomain.codeSource.location))

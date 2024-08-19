@@ -4,8 +4,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":kotlin"))
-    implementation(project(":gradle-extension"))
+    implementation(projects.kotlin)
+    implementation(projects.gradleExtension)
     implementation(libs.android.gradlePlugin)
     implementation(libs.ksp.gradlePlugin)
     implementation(libs.room.gradlePlugin)
