@@ -9,7 +9,7 @@ import org.gradle.api.Project
 class AndroidBaseComposeConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            plugins.apply("org.jetbrains.kotlin.plugin.compose")
+            plugins.apply(libs.plugins.kotlin.compose.get().pluginId)
 
             val extension = extensions.findByType(ApplicationExtension::class.java)
                 ?: extensions.findByType(LibraryExtension::class.java)

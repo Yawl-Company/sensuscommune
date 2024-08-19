@@ -7,7 +7,7 @@ import org.gradle.api.Project
 class AndroidLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            plugins.apply("com.android.library")
+            plugins.apply(libs.plugins.android.library.get().pluginId)
             plugins.apply(AndroidBaseConventionPlugin::class.java)
             plugins.apply(KotlinAndroidBaseConventionPlugin::class.java)
         }
