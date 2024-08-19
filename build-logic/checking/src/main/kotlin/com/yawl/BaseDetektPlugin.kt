@@ -9,7 +9,7 @@ class BaseDetektPlugin : Plugin<Project> {
         with(project) {
             plugins.apply("base")
             plugins.apply("io.gitlab.arturbosch.detekt")
-            project.dependencies.add("detektPlugins", libs.detektFormatting)
+            project.dependencies.add("detektPlugins", libs.detekt.formatting)
 
             val detektTask = tasks.named("detekt", Detekt::class.java)
             detektTask.configure { task ->
