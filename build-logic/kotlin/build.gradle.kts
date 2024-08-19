@@ -4,7 +4,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":gradle-extension"))
+    implementation(projects.gradleExtension)
     implementation(libs.kotlin.gradlePlugin)
     implementation(libs.ksp.gradlePlugin)
     // workaround for https://github.com/gradle/gradle/issues/15383
