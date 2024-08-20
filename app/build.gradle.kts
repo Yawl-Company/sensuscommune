@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.yawl.android.application.compose)
     alias(libs.plugins.yawl.dagger)
     alias(libs.plugins.yawl.firebase)
+    alias(libs.plugins.yawl.android.application.sign)
 }
 
 android {
@@ -22,6 +23,7 @@ android {
     buildTypes {
         debug {
             isMinifyEnabled = false
+            applicationIdSuffix = ".debug"
         }
         release {
             isMinifyEnabled = true

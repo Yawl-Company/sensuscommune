@@ -99,3 +99,4 @@ yawl-android-library-compose = { id = "convention.android-library-compose", vers
 yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-firebase = { id = "convention.firebase", version = "unspecified" }
+yawl-android-application-sign = { id = "convention.signing", version = "unspecified" }
