@@ -29,7 +29,7 @@ coreKtx = "1.13.1"
 lifecycleRuntimeKtx = "2.8.4"
 
 # other
-ksp = "2.0.0-1.0.21"
+ksp = "2.0.10-1.0.24"
 dagger = "2.52"
 room = "2.6.1"
 gms = "4.4.2"
