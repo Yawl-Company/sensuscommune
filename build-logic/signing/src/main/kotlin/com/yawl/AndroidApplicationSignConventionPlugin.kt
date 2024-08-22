@@ -10,22 +10,22 @@ class AndroidApplicationSignConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             val signingPropertiesFile = rootProject.file("signing.properties")
-            val signingProperties = Properties()
-
-            signingProperties.load(FileInputStream(signingPropertiesFile))
-
-            extensions.configure(ApplicationExtension::class.java) {
-                with(it) {
-                    signingConfigs.create("release").apply {
-                        storeFile = file(signingProperties["keystore.path"] as String)
-                        storePassword = signingProperties["keystore.password"] as String
-                        keyAlias = signingProperties["key.alias"] as String
-                        keyPassword = signingProperties["key.password"] as String
-                    }
-
-                    buildTypes {
-                        release {
-                            signingConfig = signingConfigs.findByName("release")
+            if (signingPropertiesFile.exists()) {
+                val signingProperties = Properties().apply {
+                    load(FileInputStream(signingPropertiesFile))
+                }
+                extensions.configure(ApplicationExtension::class.java) {
+                    with(it) {
+                        signingConfigs.create("release").apply {
+                            storeFile = file(signingProperties["keystore.path"] as String)
+                            storePassword = signingProperties["keystore.password"] as String
+                            keyAlias = signingProperties["key.alias"] as String
+                            keyPassword = signingProperties["key.password"] as String
+                        }
+                        buildTypes {
+                            release {
+                                signingConfig = signingConfigs.findByName("release")
+                            }
                         }
                     }
                 }
