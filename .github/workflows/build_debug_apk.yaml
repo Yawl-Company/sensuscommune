@@ -16,6 +16,7 @@ jobs:
   build_debug_apk:
     name: Build debug apk
     runs-on: ubuntu-latest
+    environment: development
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -30,7 +31,10 @@ jobs:
         uses: gradle/actions/setup-gradle@v3
 
       - name: Decode google-services.json
-        run: echo "${{ secrets.DEBUG_GOOGLE_SERVICES_JSON }}" | base64 --decode > ./app/google-services.json
+        env:
+          DEBUG_GOOGLE_SERVICES_JSON: ${{ secrets.DEBUG_GOOGLE_SERVICES_JSON }}
+        run: |
+            echo $DEBUG_GOOGLE_SERVICES_JSON | base64 --decode > ./app/google-services.json
 
       - name: Assemble the project
         run: ./gradlew assembleDebug
