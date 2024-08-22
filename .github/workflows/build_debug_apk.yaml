@@ -29,12 +29,8 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Create empty signing.properties file
-        run: |
-            echo "keystore.path=" > signing.properties
-            echo "keystore.password=" >> signing.properties
-            echo "key.alias=" >> signing.properties
-            echo "key.password=" >> signing.properties
+      - name: Decode google-services.json
+        run: echo "${{ secrets.DEBUG_GOOGLE_SERVICES_JSON }}" | base64 --decode > ./app/google-services.json
 
       - name: Assemble the project
         run: ./gradlew assembleDebug
