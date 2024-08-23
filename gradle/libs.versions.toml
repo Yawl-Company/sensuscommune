@@ -33,7 +33,7 @@ ksp = "2.0.0-1.0.21"
 dagger = "2.52"
 room = "2.6.1"
 gms = "4.4.2"
-firebaseBom = "33.1.2"
+firebaseBom = "33.2.0"
 uiTextGoogleFonts = "1.6.8"
 
 [libraries]
