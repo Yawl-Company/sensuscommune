@@ -30,6 +30,7 @@ lifecycleRuntimeKtx = "2.8.4"
 
 # other
 ksp = "2.0.0-1.0.21"
+kapt = "2.0.20"
 dagger = "2.52"
 room = "2.6.1"
 gms = "4.4.2"
@@ -89,6 +90,7 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-parcelable = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kapt" }
 room = { id = "androidx.room", version.ref = "room" }
 google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
 

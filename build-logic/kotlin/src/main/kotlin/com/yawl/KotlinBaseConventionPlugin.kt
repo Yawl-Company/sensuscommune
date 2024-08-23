@@ -22,7 +22,9 @@ class KotlinBaseConventionPlugin : Plugin<Project> {
                     freeCompilerArgs.set(
                         mutableListOf(
                             "-opt-in=kotlin.RequiresOptIn",
-                            "-progressive"
+                            "-progressive",
+                            // workaround for https://youtrack.jetbrains.com/issue/KT-68400/K2-w-Kapt-currently-doesnt-support-language-version-2.0.-Falling-back-to-1.9.
+                            "-Xsuppress-version-warnings"
                         )
                     )
                 }
