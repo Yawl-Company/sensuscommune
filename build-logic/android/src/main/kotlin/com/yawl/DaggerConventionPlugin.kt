@@ -6,9 +6,10 @@ import org.gradle.api.Project
 class DaggerConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            plugins.apply(KspConventionPlugin::class.java)
+            plugins.apply(KaptConventionPlugin::class.java)
             dependencies.add("implementation", libs.dagger.base.get())
-            dependencies.add("ksp", libs.dagger.compiler.get())
+            // change to ksp when supported
+            dependencies.add("kapt", libs.dagger.compiler.get())
         }
     }
 }
