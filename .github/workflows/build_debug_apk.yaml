@@ -6,6 +6,7 @@ on:
       - develop
     paths-ignore:
       - '.github/**'
+      - '**.md'
   workflow_dispatch:
 
 concurrency:
