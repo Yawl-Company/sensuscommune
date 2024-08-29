@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "sensus-commune"
+rootProject.name = "vermont"
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yawl.sensuscommune.designsystem"
+    namespace = "com.yawl.vermont.designsystem"
 }
 
 dependencies {

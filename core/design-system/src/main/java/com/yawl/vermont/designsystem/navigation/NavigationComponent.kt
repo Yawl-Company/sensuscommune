@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.designsystem.navigation
+package com.yawl.vermont.designsystem.navigation
 
 import androidx.compose.material3.adaptive.WindowAdaptiveInfo
 import androidx.window.core.layout.WindowHeightSizeClass

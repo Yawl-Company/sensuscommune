@@ -1,10 +1,10 @@
-package com.yawl.sensuscommune.navigation
+package com.yawl.vermont.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.yawl.sensuscommune.designsystem.navigation.AdaptiveNavigation
-import com.yawl.sensuscommune.designsystem.theme.SensusCommuneTheme
+import com.yawl.vermont.designsystem.navigation.AdaptiveNavigation
+import com.yawl.vermont.designsystem.theme.ApplicationTheme
 
 @Composable
 fun AppNavigation(
@@ -21,7 +21,7 @@ fun AppNavigation(
 @Preview
 @Composable
 fun PreviewAppNavigation() {
-    SensusCommuneTheme {
+    ApplicationTheme {
         AppNavigation {
 
         }

@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.designsystem.navigation
+package com.yawl.vermont.designsystem.navigation
 
 interface NavigationType {
     data object NavigationBar : NavigationType

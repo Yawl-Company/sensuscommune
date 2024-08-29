@@ -1,8 +1,8 @@
-package com.yawl.sensuscommune.window
+package com.yawl.vermont.window
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.yawl.sensuscommune.navigation.AppNavigation
+import com.yawl.vermont.navigation.AppNavigation
 
 @Composable
 fun AppWindow(

@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.designsystem.theme
+package com.yawl.vermont.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

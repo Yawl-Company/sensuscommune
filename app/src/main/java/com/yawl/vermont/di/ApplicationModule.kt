@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.di
+package com.yawl.vermont.di
 
 import android.app.Application
 import android.content.Context
