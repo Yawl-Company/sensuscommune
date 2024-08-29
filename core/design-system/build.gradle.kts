@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.yawl.sensuscommune.designsystem"
+    namespace = "com.yawl.vermont.designsystem"
 }
 
 dependencies {
@@ -12,6 +12,7 @@ dependencies {
     api(libs.androidx.compose.material.iconsExtended)
     api(libs.androidx.compose.material3)
     api(libs.androidx.compose.runtime)
+    api(libs.androidx.compose.material3.adaptive.layout)
 
     implementation(libs.androidx.ui.text.google.fonts)
 }

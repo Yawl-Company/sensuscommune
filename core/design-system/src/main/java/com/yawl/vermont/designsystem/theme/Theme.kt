@@ -1,4 +1,4 @@
-package com.yawl.sensuscommune.designsystem.theme
+package com.yawl.vermont.designsystem.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 @Composable
-fun SensusCommuneTheme(
+fun ApplicationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit

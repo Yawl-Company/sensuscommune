@@ -1,10 +1,10 @@
-package com.yawl.sensuscommune
+package com.yawl.vermont
 
 import android.app.Application
-import com.yawl.sensuscommune.di.ApplicationComponent
-import com.yawl.sensuscommune.di.DaggerApplicationComponent
+import com.yawl.vermont.di.ApplicationComponent
+import com.yawl.vermont.di.DaggerApplicationComponent
 
-class SensusCommuneApplication : Application() {
+class Application : Application() {
     private val component: ApplicationComponent by lazy {
         DaggerApplicationComponent.builder().build()
     }
