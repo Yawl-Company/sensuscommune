@@ -30,7 +30,7 @@ class AndroidBaseComposeConventionPlugin : Plugin<Project> {
                     add("implementation", platform(bom))
                     add("androidTestImplementation", platform(bom))
                     add("implementation", libs.androidx.ui.tooling.preview.get())
-                    add("debugImplementation", libs.androidx.ui.tooling.preview.get())
+                    add("debugImplementation", libs.androidx.ui.tooling.base.get())
                 }
             }
         }
