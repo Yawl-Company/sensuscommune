@@ -8,8 +8,10 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.file.RegularFile
+import org.gradle.api.tasks.testing.Test
 import org.gradle.internal.extensions.stdlib.capitalized
 import org.gradle.testing.jacoco.plugins.JacocoPluginExtension
+import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
@@ -85,6 +87,15 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                             { _ -> filesProperty },
                             { _ -> directoriesProperty },
                         )
+                }
+            }
+
+            tasks.withType(Test::class.java).configureEach { test ->
+                test.extensions.configure(JacocoTaskExtension::class.java) { jacoco ->
+                    with(jacoco) {
+                        isIncludeNoLocationClasses = true
+                        excludes = listOf("jdk.internal.*")
+                    }
                 }
             }
         }
