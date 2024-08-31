@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.yawl.android.compose)
     alias(libs.plugins.yawl.dagger)
     alias(libs.plugins.yawl.firebase)
+    alias(libs.plugins.yawl.android.application.flavor)
     alias(libs.plugins.yawl.android.application.sign)
     alias(libs.plugins.yawl.android.unit.test)
     alias(libs.plugins.yawl.android.ui.test)
