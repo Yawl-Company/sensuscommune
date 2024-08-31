@@ -14,8 +14,11 @@ buildTools = "34.0.0"
 # testing and analysis
 junit = "4.13.2"
 junitVersion = "1.2.1"
+testRules = "1.6.1"
+testRunner = "1.6.2"
 espressoCore = "3.6.1"
 detekt = "1.23.5"
+jacoco = "0.8.12"
 
 # compose
 activityCompose = "1.9.1"
@@ -54,6 +57,7 @@ androidx-compose-runtime = { group = "androidx.compose.runtime", name = "runtime
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling-base = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-ui-text-google-fonts = { group = "androidx.compose.ui", name = "ui-text-google-fonts", version.ref = "uiTextGoogleFonts" }
 
@@ -69,8 +73,11 @@ androidx-compose-material3-windowSizeClass = { group = "androidx.compose.materia
 # testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "testRules" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "testRunner" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
 # other
 kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin" }
@@ -96,9 +103,11 @@ google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
 
 yawl-android-application = { id = "convention.kotlin-android-app", version = "unspecified" }
 yawl-android-library = { id = "convention.kotlin-android-library", version = "unspecified" }
-yawl-android-application-compose = { id = "convention.android-app-compose", version = "unspecified" }
-yawl-android-library-compose = { id = "convention.android-library-compose", version = "unspecified" }
+yawl-android-compose = { id = "convention.android-compose", version = "unspecified" }
 yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-firebase = { id = "convention.firebase", version = "unspecified" }
 yawl-android-application-sign = { id = "convention.signing", version = "unspecified" }
+yawl-android-unit-test = { id = "convention.unit", version = "unspecified" }
+yawl-android-ui-test = { id = "convention.ui", version = "unspecified" }
+yawl-android-coverage = { id = "convention.coverage", version = "unspecified" }

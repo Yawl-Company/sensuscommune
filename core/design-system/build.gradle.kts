@@ -1,6 +1,6 @@
 plugins {
     alias(libs.plugins.yawl.android.library)
-    alias(libs.plugins.yawl.android.library.compose)
+    alias(libs.plugins.yawl.android.compose)
 }
 
 android {

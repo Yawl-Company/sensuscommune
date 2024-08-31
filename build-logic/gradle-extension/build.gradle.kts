@@ -2,6 +2,8 @@ plugins {
     kotlin("jvm")
 }
 
+group = "com.yawl.android.build-logic"
+
 dependencies {
     compileOnly(gradleApi())
     // workaround for https://github.com/gradle/gradle/issues/15383

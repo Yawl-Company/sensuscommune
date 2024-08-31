@@ -3,6 +3,8 @@ plugins {
     `java-gradle-plugin`
 }
 
+group = "com.yawl.android.build-logic"
+
 dependencies {
     implementation(projects.kotlin)
     implementation(projects.gradleExtension)
@@ -25,14 +27,9 @@ gradlePlugin {
             implementationClass = "com.yawl.AndroidApplicationConventionPlugin"
         }
 
-        create("android-app-compose") {
-            id = "convention.android-app-compose"
-            implementationClass = "com.yawl.compose.AndroidApplicationComposeConventionPlugin"
-        }
-
-        create("android-lib-compose") {
-            id = "convention.android-library-compose"
-            implementationClass = "com.yawl.compose.AndroidLibraryComposeConventionPlugin"
+        create("android-compose") {
+            id = "convention.android-compose"
+            implementationClass = "com.yawl.compose.AndroidComposeConventionPlugin"
         }
 
         create("dagger") {
