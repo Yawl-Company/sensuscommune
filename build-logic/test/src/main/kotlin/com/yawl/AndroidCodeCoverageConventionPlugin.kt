@@ -8,10 +8,8 @@ import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.api.file.Directory
 import org.gradle.api.file.RegularFile
-import org.gradle.api.tasks.testing.Test
 import org.gradle.internal.extensions.stdlib.capitalized
 import org.gradle.testing.jacoco.plugins.JacocoPluginExtension
-import org.gradle.testing.jacoco.plugins.JacocoTaskExtension
 import org.gradle.testing.jacoco.tasks.JacocoReport
 
 class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
@@ -37,6 +35,7 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                 val fileTree = objects.fileTree()
                 val filesProperty = objects.listProperty(RegularFile::class.java)
                 val directoriesProperty = objects.listProperty(Directory::class.java)
+                val buildDirectory = layout.buildDirectory.get().asFile
 
                 android.onVariants { variant ->
                     val taskId = variant.name.capitalized()
@@ -57,8 +56,8 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                             )
 
                             reports.apply {
-                                xml.required
-                                html.required
+                                xml.required.set(true)
+                                html.required.set(true)
                             }
 
                             sourceDirectories.setFrom(
@@ -69,11 +68,10 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                             )
 
                             executionData.setFrom(
-                                project.fileTree("$projectDir/out/unit_test_code_coverage/${variant.name}UnitTest")
+                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}UnitTest.exec")
                                     .matching { it.include("**/*.exec") },
-
-                                project.fileTree("$projectDir/out/code_coverage/${variant.name}AndroidTest")
-                                    .matching { it.include("**/*.ec") },
+                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}AndroidTest.ec")
+                                    .matching { it.include("**/*.exec") }
                             )
                         }
 
@@ -88,15 +86,6 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                             { _ -> filesProperty },
                             { _ -> directoriesProperty },
                         )
-                }
-            }
-
-            tasks.withType(Test::class.java).configureEach { test ->
-                test.extensions.configure(JacocoTaskExtension::class.java) { jacoco ->
-                    with(jacoco) {
-                        isIncludeNoLocationClasses = true
-                        excludes = listOf("jdk.internal.*")
-                    }
                 }
             }
         }
