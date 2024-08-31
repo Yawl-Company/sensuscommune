@@ -97,8 +97,7 @@ google-services = { id = "com.google.gms.google-services", version.ref = "gms" }
 
 yawl-android-application = { id = "convention.kotlin-android-app", version = "unspecified" }
 yawl-android-library = { id = "convention.kotlin-android-library", version = "unspecified" }
-yawl-android-application-compose = { id = "convention.android-app-compose", version = "unspecified" }
-yawl-android-library-compose = { id = "convention.android-library-compose", version = "unspecified" }
+yawl-android-compose = { id = "convention.android-compose", version = "unspecified" }
 yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-firebase = { id = "convention.firebase", version = "unspecified" }
