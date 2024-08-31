@@ -67,9 +67,9 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                             )
 
                             executionData.setFrom(
-                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}UnitTest.exec")
+                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}UnitTest")
                                     .matching { it.include("**/*.exec") },
-                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}AndroidTest.ec")
+                                project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}AndroidTest")
                                     .matching { it.include("**/*.exec") }
                             )
 
