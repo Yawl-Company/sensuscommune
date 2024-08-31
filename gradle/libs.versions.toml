@@ -14,6 +14,8 @@ buildTools = "34.0.0"
 # testing and analysis
 junit = "4.13.2"
 junitVersion = "1.2.1"
+testRules = "1.6.1"
+testRunner = "1.6.2"
 espressoCore = "3.6.1"
 detekt = "1.23.5"
 jacoco = "0.8.12"
@@ -71,8 +73,11 @@ androidx-compose-material3-windowSizeClass = { group = "androidx.compose.materia
 # testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "testRules" }
+androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "testRunner" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 
 # other
 kotlin-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlin" }
@@ -103,4 +108,6 @@ yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-firebase = { id = "convention.firebase", version = "unspecified" }
 yawl-android-application-sign = { id = "convention.signing", version = "unspecified" }
+yawl-android-unit-test = { id = "convention.unit", version = "unspecified" }
+yawl-android-ui-test = { id = "convention.ui", version = "unspecified" }
 yawl-android-coverage = { id = "convention.coverage", version = "unspecified" }

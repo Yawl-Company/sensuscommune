@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.yawl.dagger)
     alias(libs.plugins.yawl.firebase)
     alias(libs.plugins.yawl.android.application.sign)
+    alias(libs.plugins.yawl.android.unit.test)
+    alias(libs.plugins.yawl.android.ui.test)
     alias(libs.plugins.yawl.android.coverage)
 }
 
@@ -15,7 +17,6 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
