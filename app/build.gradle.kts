@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.yawl.dagger)
     alias(libs.plugins.yawl.firebase)
     alias(libs.plugins.yawl.android.application.sign)
+    alias(libs.plugins.yawl.android.coverage)
 }
 
 android {

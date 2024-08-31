@@ -3,6 +3,8 @@ plugins {
     `java-gradle-plugin`
 }
 
+group = "com.yawl.android.build-logic"
+
 dependencies {
     implementation(libs.android.gradlePlugin)
 }

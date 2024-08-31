@@ -16,6 +16,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 detekt = "1.23.5"
+jacoco = "0.8.12"
 
 # compose
 activityCompose = "1.9.1"
@@ -102,3 +103,4 @@ yawl-dagger = { id = "convention.dagger", version = "unspecified" }
 yawl-detekt-root = { id = "convention.detekt-root", version = "unspecified" }
 yawl-firebase = { id = "convention.firebase", version = "unspecified" }
 yawl-android-application-sign = { id = "convention.signing", version = "unspecified" }
+yawl-android-coverage = { id = "convention.coverage", version = "unspecified" }
