@@ -32,7 +32,6 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
 
             extensions.configure(AndroidComponentsExtension::class.java) { android ->
                 val objects = project.objects
-                val fileTree = objects.fileTree()
                 val filesProperty = objects.listProperty(RegularFile::class.java)
                 val directoriesProperty = objects.listProperty(Directory::class.java)
                 val buildDirectory = layout.buildDirectory.get().asFile
@@ -48,7 +47,7 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                                 filesProperty,
                                 directoriesProperty.map { directories ->
                                     directories.map { directory ->
-                                        fileTree
+                                        objects.fileTree()
                                             .setDir(directory)
                                             .exclude(exclusions)
                                     }
