@@ -1,7 +1,6 @@
 package com.yawl.compose
 
-import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.gradle.LibraryExtension
+import com.android.build.api.dsl.CommonExtension
 import com.yawl.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -11,16 +10,12 @@ class AndroidBaseComposeConventionPlugin : Plugin<Project> {
         with(target) {
             plugins.apply(libs.plugins.kotlin.compose.get().pluginId)
 
-            val extension = extensions.findByType(ApplicationExtension::class.java)
-                ?: extensions.findByType(LibraryExtension::class.java)
-                ?: throw IllegalStateException("Illegal caller context")
-
-            extension.apply {
-                buildFeatures {
+            extensions.configure(CommonExtension::class.java) { android ->
+                android.buildFeatures {
                     compose = true
                 }
 
-                composeOptions {
+                android.composeOptions {
                     kotlinCompilerExtensionVersion =
                         libs.versions.androidxComposeCompiler.get().toString()
                 }
