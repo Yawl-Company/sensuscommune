@@ -72,10 +72,10 @@ class AndroidCodeCoverageConventionPlugin : Plugin<Project> {
                                 project.fileTree("$buildDirectory/outputs/jacoco/${variant.name}AndroidTest.ec")
                                     .matching { it.include("**/*.exec") }
                             )
-                        }
 
-                        group = "Report"
-                        description = "Generate code coverage report on the $taskId"
+                            group = "Report"
+                            description = "Generate code coverage report on the $taskId"
+                        }
                     }
 
                     variant.artifacts.forScope(ScopedArtifacts.Scope.PROJECT)
