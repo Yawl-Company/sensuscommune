@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.yawl.android.compose)
     alias(libs.plugins.yawl.dagger)
     alias(libs.plugins.yawl.firebase)
+    alias(libs.plugins.yawl.android.application.flavor)
     alias(libs.plugins.yawl.android.application.sign)
     alias(libs.plugins.yawl.android.unit.test)
     alias(libs.plugins.yawl.android.ui.test)
@@ -14,9 +15,6 @@ android {
 
     defaultConfig {
         applicationId = "com.yawl.vermont"
-        versionCode = 1
-        versionName = "1.0"
-
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -49,11 +47,6 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.compose.material3)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.ui.test.junit4)
 
     implementation(projects.core.designSystem)
 }
