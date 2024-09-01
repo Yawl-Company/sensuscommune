@@ -14,7 +14,7 @@ class AndroidApplicationFlavorConventionPlugin : Plugin<Project> {
                         create("internal") {
                             it.dimension = STORE_DIMENSION
                             it.versionCode = 1
-                            it.versionName = "internal"
+                            it.versionName = "1.0"
                         }
                     }
                 }

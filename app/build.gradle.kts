@@ -15,9 +15,6 @@ android {
 
     defaultConfig {
         applicationId = "com.yawl.vermont"
-        versionCode = 1
-        versionName = "1.0"
-
         vectorDrawables {
             useSupportLibrary = true
         }
